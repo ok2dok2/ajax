@@ -1,0 +1,14 @@
+<h1>ユーザー一覧</h1>
+
+<tbody>
+  <table>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+
+        <td><%= link_to 'チャット', message_path(user.id)%></td>
+      </tr>
+    <% end %>
+    </table>
+  </tbody>
